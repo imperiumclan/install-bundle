@@ -1,0 +1,25 @@
+<html>
+<head>
+{{ encore_entry_link_tags('app') }}
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1><i class="fa fa-check-double"></i> Welcome to {{ AppTitle|default('[Application Name]') }} installer.</h1>
+            <p>
+                This installer help you to install and configure this {{ AppTitle|default('[Application Name]') }} instance.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+{{ encore_entry_script_tags('app') }}
+<script src="{{ asset('bundles/install/install.js') }}"></script>
+</body>
+</html>

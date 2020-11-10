@@ -1,0 +1,45 @@
+{% extends "@Install/base.html.twig" %}
+
+{% block body %}
+{{ form_start(form) }}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h2>Configuration de la base de données</h2>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-12">
+            <i class="fa fa-database"></i> {{ form_label(form.type) }}
+            {{ form_widget(form.type) }}
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-8">
+            <i class="fa fa-server"></i> {{ form_label(form.host) }}
+            {{ form_widget(form.host) }}
+        </div>
+        <div class="col-4">
+            <i class="fa fa-handshake"></i> {{ form_label(form.port) }}
+            {{ form_widget(form.port) }}
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-6">
+            <i class="fa fa-user"></i> {{ form_label(form.username) }}
+            {{ form_widget(form.username) }}
+        </div>
+        <div class="col-6">
+            <i class="fa fa-key"></i> {{ form_label(form.password) }}
+            {{ form_widget(form.password) }}
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-12">
+            {{ form_widget(form)}}
+        </div>
+    </div>
+</div>
+{{ form_end(form) }}
+
+{% endblock %}
